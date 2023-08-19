@@ -1,0 +1,57 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #36313188;
+    color: rgb(16, 7, 138);
+}
+
+h1{
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #d7dbc4;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;   
+    text-transform: uppercase; 
+}
+p{
+    font-weight: bold;
+    color: rgb(184, 7, 22);
+}
+label{
+    font-weight: bold;
+    color: rgb(8, 5, 155);
+}
+option{
+    font-weight: bold;
+    color: #5a0227;
+}
+#Aceptar{
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+#Resultados{
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+#Edad{
+    font-weight: bold;
+    color: #5a0227;
+}
+#departamento{
+    font-weight: bold;
+    color: #5a0227;
+}
+#intencion{
+    font-weight: bold;
+    color: #5a0227;
+}
+
+
+
+
+
+
+
