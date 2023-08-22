@@ -10,43 +10,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css" />
-
+    <script src="obtencionDesalidas.js"></script>
 <body>
     <h1 align="center">Encuestadora de Guatemala</h1>
-    <p>Debes de ingresar tu edad, el departamento al que perteneces y tu intencion de voto.</p>
+    <p>Debes de ingresar tu numero de DPI y tu intencion de voto. Tu numero de DPI es solamente para validar que tengas una respuesta registrada mas no se asocia tu intencion de voto</p>
     <br><!-- comment -->
-    <label for="dpi">Ingresa tu numero de DPI: </label>
+    <label for="cui">Ingresa tu numero de DPI: </label>
     <input type="number" id="dpi" name="dpi">
-    <br><br>
-    <label for="departamento">Elije el departamento en el que resides: </label>
-    <select id="departamento" name="departamento">
-        <option value="opcion1">Totonicapan</option>
-        <option value="opcion2">Guatemala</option>
-        <option value="opcion3">Quetzaltenango</option>
-    </select>
     <br><br><!-- intencion de voto -->
     <label for="intencion">Cual seria tu voto: </label>
     <select id="intencion" name="intencion">
-        <option value="opcion1">SEMILLA</option>
-        <option value="opcion2">UNE</option>
-        <option value="opcion3">NULO</option>
+        <option value="SEMILLA">SEMILLA</option>
+        <option value="UNE">UNE</option>
+        <option value="NULO">NULO</option>
     </select>
     <br><br><!-- boton de accion -->
     <button id="Aceptar">Enviar resultado</button>
-
-    <script>
-        const resultado = document.getElementById("Aceptar");
-        document.getElementById("Aceptar").addEventListener("click", function () {
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", "backEnd/controlador.php", true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    resultado.innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send();
-        });
-    </script>
     <button id="Resultados">Mostrar resultados de la encuesta</button>
 </body>
 
