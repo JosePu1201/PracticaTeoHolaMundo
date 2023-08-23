@@ -40,7 +40,7 @@ else {
                     if($resultado->num_rows > 0){
                         $fila = $resultado->fetch_assoc();
                         $cantActual = $fila["cantidad"];
-                        $nuevaCant = $cantActual + 1;
+                        $nuevaCant = $cantActual + 1; // se incrementa en uno el resultado
 
                         $insertarCant = "UPDATE PartidoPolitico SET cantidad =  $nuevaCant WHERE nombre = '$parametro2'";
                         if($conexion->query($insertarCant) === TRUE){
@@ -60,6 +60,4 @@ else {
         }
     }
 }
-
-
 ?>
