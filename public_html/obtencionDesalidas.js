@@ -18,13 +18,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     alert ("Algo falló");
                 }
-            }s
+            }
         };
 
         xhr.send();
     });
 
     resultado.addEventListener("click",function(){
-        alert("Si funciona la presion del boton");
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "backEnd/estadisticas.php", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                alert("easdasd");
+                if (xhr.status === 200) {
+                    // Mostrar el mensaje recibido desde PHP en una alerta
+                    alert(xhr.responseText);
+                } else {
+                    alert(xhr.status);
+                }
+            }
+        };
+        xhr.send();
+        
     });
 });

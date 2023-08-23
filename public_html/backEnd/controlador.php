@@ -59,5 +59,6 @@ else {
             echo "Error en la consulta";
         }
     }
+    $conexion->close();
 }
 ?>
