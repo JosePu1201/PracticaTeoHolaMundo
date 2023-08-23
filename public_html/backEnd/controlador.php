@@ -28,7 +28,7 @@ else {
             $totalCuis = $fila['total']; // guarda el total de ocurrencias 
             
             if ($totalCuis > 0) { // si ya aparece entonces ya no puede registrar una respuesta 
-                echo "Ya registraste una respuesta, no puedes volver a intentarlo";
+                echo "Ya registraste una respuesta! No puedes volver a intentarlo";
             } else {
                 // aun no responde a la encuesta y se agrega su dpi para guardarlo en la base de datos
                 $insertar = "INSERT INTO Persona (cui) VALUES ('$parametro1')";
@@ -44,10 +44,10 @@ else {
 
                         $insertarCant = "UPDATE PartidoPolitico SET cantidad =  $nuevaCant WHERE nombre = '$parametro2'";
                         if($conexion->query($insertarCant) === TRUE){
-                            echo " Tu intencion de voto se registro con exito";
+                            echo " Tu intencion de voto se registro con exito!";
                         }
                         else{
-                            echo "Ocurrio un error al registrar tu intencion de voto> Intentalo de nuevo";
+                            echo "Ocurrio un error al registrar tu intencion de voto, Intentalo de nuevo";
                         }
                     }
                 }   
